@@ -96,7 +96,7 @@ Important functions：main()
 
 ## Related Documents
 
-  Tuya Demo Center: https://developer.tuya.com/cn/demo/
+  Tuya Demo Center: https://developer.tuya.com/demo
 
 
 
@@ -104,7 +104,7 @@ Important functions：main()
 
   You can get support for Tuya by using the following methods:
 
-- Developer Center: https://developer.tuya.com/cn/
-- Help Center: https://support.tuya.com/en/help
+- Developer Center: https://developer.tuya.com
+- Help Center: https://support.tuya.com/help
 - Technical Support Work Order Center: [https://service.console.tuya.com](https://service.console.tuya.com/) 
 
