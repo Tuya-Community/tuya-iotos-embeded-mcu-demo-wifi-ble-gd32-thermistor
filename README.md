@@ -14,7 +14,7 @@ The implemented features include:
 ## Quick start  
 
 ### Compile & Burn
-+ Download [Tuya IoTOS Embeded MCU sdk](https://registry.code.tuya-inc.top/hardware_developer/tuya-iotos-embeded-mcu-demo-4g-vending-machine/tree/master) 
++ Download Tuya IoTOS Embeded Code
 + Execute the Project.uvprojx file
 + Click Compile in the software and complete the download
 

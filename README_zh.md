@@ -16,7 +16,7 @@
 ## 快速上手 
 
 ### 编译与烧录
-+ 下载[Tuya IoTOS Embeded MCU sdk](https://registry.code.tuya-inc.top/hardware_developer/tuya-iotos-embeded-mcu-demo-4g-vending-machine/tree/master) 
++ 下载Tuya IoTOS嵌入式代码
 
 + 执行Project.uvprojx文件
 
