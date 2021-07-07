@@ -1,110 +1,112 @@
-# Tuya IoTOS Embedded Mcu Demo Wifi Ble GD32_THERMISTOR
+# Tuya IoTOS Embedded Wi-Fi & Bluetooth LE Thermistor
 
 [English](./README.md) | [中文](./README_zh.md)
 
-## Introduction  
+## Overview
 
-This Demo uses the Tuya smart cloud platform, Tuya smart APP,NTCand IoTOS Embedded MCU SDK to realize a temperature acquisition.
+In this demo, we will show you how to develop with the MCU SDK to enable a NTC thermistor to connect to the Tuya IoT Cloud with the Tuya Smart app.
 
-The implemented features include:
+Features:
 
-+ Temperature Acquisition
-
-
-## Quick start  
-
-### Compile & Burn
-+ Download Tuya IoTOS Embeded Code
-+ Execute the Project.uvprojx file
-+ Click Compile in the software and complete the download
++ Collect temperature
 
 
-### File introduction 
+
+
+## Get started
+
+### Compile and flash
++ Download [Tuya IoTOS Embedded MCU SDK](https://registry.code.tuya-inc.top/hardware_developer/tuya-iotos-embeded-mcu-demo-4g-vending-machine/tree/master).
+
++ Run `Project.uvprojx`
+
++ Click **Compile** on the software to download the code.
+
+
+### File introduction
 
 ```
 ├── Application
-│   ├── main.c
-│   ├── gd32e23x_it.c
-│   ├── systick.c
-│   ├── gd32e23x_it.h
-│   ├── systick.h
-│   ├── gd32e23x_libopt.h
+│   ├── main.c
+│   ├── gd32e23x_it.c
+│   ├── systick.c
+│   ├── gd32e23x_it.h
+│   ├── systick.h
+│   ├── gd32e23x_libopt.h
 ├── GD32E23x_Firmware_Library
-│   ├── CMSIS
+│   ├── CMSIS
         ├── Include
-           │   ├──gd32e23x.h
-           │   ├──system_gd32e23x.h
+           │   ├──gd32e23x.h
+           │   ├──system_gd32e23x.h
         ├── Source
-           │   ├──startup_gd32e23x.s
-           │   ├──system_gd32e23x.h        
-│   ├── GD32E23x_standard_peripheral
+           │   ├──startup_gd32e23x.s
+           │   ├──system_gd32e23x.h        
+│   ├── GD32E23x_standard_peripheral
         ├── Include
         ├── Source
 ├──User
-│   ├── adc.c
-│   ├── adc.h
-│   ├── connect_wifi.c
-│   ├── delay.c
-│   ├── delay.h
-│   ├── led.c
-│   ├── led.h
-│   ├── usart.c
-│   ├── usart.h
+│   ├── adc.c
+│   ├── adc.h
+│   ├── connect_wifi.c
+│   ├── delay.c
+│   ├── delay.h
+│   ├── led.c
+│   ├── led.h
+│   ├── usart.c
+│   ├── usart.h
 └── MCU_SDK
-    ├── mcu_api.c
-    ├── mcu_api.h
-    ├── protocol.c
-    ├── protocol.h
+    ├── mcu_api.c
+    ├── mcu_api.h
+    ├── protocol.c
+    ├── protocol.h
     ├── system.c
-    ├── system.h
+    ├── system.h
     └── wifi.h
+
 ```
 
 
 
 ### Demo entry
 
-Entry file：main.c
+Entry file: `main.c`
 
-Important functions：main()
+Main function: `main()`
 
-+ Initialize and configure MCU GPIO,USART,DMA,ADC,TIMER,NTC sensor, etc. All events are polled and judged in while(1)。
-
-
-
-
-### DataPoint related
-
-+ DP point processing: mcu_dp_value_update()
-
-| function name | unsigned char mcu_dp_value_update(unsigned char dpid,unsigned long value) |
-| ------------- | ------------------------------------------------------------ |
-| dpid          | DP ID number                                                 |
-| value         | DP data                                                      |
-| Return        | SUCCESS: Success ERROR: Failure                              |
++ Initialize and configure the GPIO, USART, DMA, ADC, and timer of the MCU as well as the NTC thermistor. All events are polled and determined in `while(1)`.
 
 
 
-### I/O List  
 
-|   NTC    |  UASRT0  | UASRT1  |
+### Data point (DP)
+
++ Process DP data: `mcu_dp_value_update()`
+
+| Function name | unsigned char mcu_dp_value_update(unsigned char dpid,unsigned long value) |
+| ------ | ------------------------------------------------------------ |
+| dpid | DP ID |
+| value | DP data |
+| Return | SUCCESS: DP data reporting succeeded. ERROR: DP data reporting failed. |
+
+
+
+### Pin configuration
+
+| NTC | UASRT0 | UASRT1 |
 | :------: | :------: | :-----: |
-| PA1 ADC1 | PA9 TXD  | PA2 TXD |
+| PA1 ADC1 | PA9 TXD | PA2 TXD |
 |          | PA10 RXD | PA3 RXD |
 
+## Reference
 
-
-## Related Documents
-
-  Tuya Demo Center: https://developer.tuya.com/demo
+[Tuya Project Hub](https://developer.tuya.com/demo)
 
 
 
 ## Technical Support
 
-  You can get support for Tuya by using the following methods:
+You can get support from Tuya with the following methods:
 
-- Developer Center: https://developer.tuya.com
-- Help Center: https://support.tuya.com/help
-- Technical Support Work Order Center: [https://service.console.tuya.com](https://service.console.tuya.com/) 
-
+- [Tuya IoT Developer Platform](https://developer.tuya.com/en/)
+- [Help Center](https://support.tuya.com/en/help)
+- [Service & Support](https://service.console.tuya.com)[](https://service.console.tuya.com/)
