@@ -6,7 +6,7 @@
 
 In this demo, we will show you how to develop with the MCU SDK to enable a NTC thermistor to connect to the Tuya IoT Cloud with the Tuya Smart app.
 
-Features:
+Feature:
 
 + Collect temperature
 
@@ -16,9 +16,9 @@ Features:
 ## Get started
 
 ### Compile and flash
-+ Download [Tuya IoTOS Embedded MCU SDK](https://registry.code.tuya-inc.top/hardware_developer/tuya-iotos-embeded-mcu-demo-4g-vending-machine/tree/master).
++ Download Tuya IoTOS embedded code.
 
-+ Run `Project.uvprojx`
++ Run `Project.uvprojx`.
 
 + Click **Compile** on the software to download the code.
 
